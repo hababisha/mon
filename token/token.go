@@ -18,6 +18,13 @@ const (
 	// OPERATORS
 	ASSIGN = "="
 	PLUS = "+"
+	BANG = "!"
+	ASTERSIK = "*"
+	SLASH = "/"
+	MINUS = "-"
+
+	LT = "<"
+	GT = ">"
 
 	// DELIMITERS
 	COMMA = ","
