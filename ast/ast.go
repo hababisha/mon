@@ -31,15 +31,24 @@ func (p *Program) TokenLiteral() string{
 	}
 }
 
-
+//Let statement
 type LetStatement struct {
 	Token token.Token // the token.Let token
 	Name *Identifier
 	Value Expression
 }
 
+//return statement
+type ReturnStatement struct{
+	Token token.Token // the return Token
+	ReturnValue Expression
+}
+
 func (ls *LetStatement) statementNode() {}
 func (ls *LetStatement) TokenLiteral() string { return ls.Token.Literal }
+
+func (rs *ReturnStatement) statementNode() {}
+func (rs *ReturnStatement) TokenLiteral() string { return rs.Token.Literal}
 
 type Identifier struct {
 	Token token.Token // the token.IDENT token
