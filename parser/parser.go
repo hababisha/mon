@@ -102,7 +102,7 @@ func (p *Parser) parseReturnStatement() *ast.ReturnStatement{
 	}
 
 	return stmt
-}
+} 	
 
 func (p *Parser) curTokenIs(t token.TokenType) bool{
 	return t == p.curToken.Type
@@ -121,3 +121,6 @@ func (p *Parser) expectPeek(t token.TokenType) bool {
 		return false
 	}
 }
+
+//parsing statements is relatively straight forward. process the tokens from left to right
+// expect or reject the next tokens if everything fits we return an AST node
